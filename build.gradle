@@ -1,0 +1,34 @@
+plugins {
+    id "io.spring.dependency-management" version "1.0.8.RELEASE"
+    id 'maven-publish'
+}
+
+allprojects {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = "br.ufsc.ine.ppgcc"
+                artifactId = "5ions-correlation"
+                version = "0.1"
+            }
+        }
+    }
+
+    repositories {
+        jcenter()
+    }
+}
+
+subprojects {
+    version = '1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java-library'
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.7.RELEASE")
+        }
+    }
+}

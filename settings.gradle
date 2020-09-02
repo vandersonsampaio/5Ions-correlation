@@ -1,0 +1,6 @@
+rootProject.name = '5Ions-correlation'
+
+include 'correlation.client',
+        'correlation.model',
+        'correlation.service',
+        'correlation.controller'
