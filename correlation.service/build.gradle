@@ -1,6 +1,8 @@
 dependencies {
+    implementation project(':correlation.model')
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
-    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+    implementation 'br.ufsc.ine.ppgcc.five-ions:weights-adjustment:0.0.1-beta.1'
 }
